@@ -1,0 +1,17 @@
+import cv2
+
+img = cv2.imread("gradient.jpeg")
+ret,th1 = cv2.threshold(img,50,50,cv2.THRESH_BINARY)
+ret,th2 = cv2.threshold(img,50,50,cv2.THRESH_BINARY_INV)
+ret,th3 = cv2.threshold(img,50,50,cv2.THRESH_TOZERO)
+ret,th4 = cv2.threshold(img,50,50,cv2.THRESH_TRUNC)
+ret,th5 = cv2.threshold(img,50,50,cv2.THRESH_TOZERO_INV)
+print(th1)
+cv2.imshow("Original",img)
+cv2.imshow("T1",th1)
+cv2.imshow("T2",th2)
+cv2.imshow("T3",th3)
+cv2.imshow("T4",th4)
+cv2.imshow("T5",th5)
+cv2.waitKey(0)
+cv2.destroyAllWindows()

@@ -1,0 +1,14 @@
+import cv2
+
+img = cv2.imread("index.jpeg",-1)
+
+cv2.imshow("image",img)
+key = cv2.waitKey(0)
+
+if key == 27:
+    cv2.destroyAllWindows()
+
+elif key == ord('s'):
+    cv2.imwrite("index_copy.jpeg",img)
+    cv2.destroyAllWindows()
+
